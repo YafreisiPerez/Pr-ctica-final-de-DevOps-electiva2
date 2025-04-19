@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.animated-text {
+    font-size: 2.5rem;
+    color: #fff;
+    animation: rainbowText 4s linear infinite;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+@keyframes rainbowText {
+    0% { color: #ff3cac; }
+    25% { color: #784ba0; }
+    50% { color: #2b86c5; }
+    75% { color: #42e695; }
+    100% { color: #ff3cac; }
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
